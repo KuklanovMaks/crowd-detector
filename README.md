@@ -62,9 +62,6 @@ crowd-detector/
 - FastAPI — веб-интерфейс
 - OpenCV — работа с видео
 - Ultralytics YOLOv11 m — модель для детекции людей
-- tempfile / shutil — безопасная работа с временными файлами
-- cv2.VideoWriter — отрисовка и сохранение результата
-
 ---
 
 ## Результат
