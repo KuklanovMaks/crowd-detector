@@ -1,0 +1,26 @@
+[project]
+name = "crowd-detector"
+version = "0.1.0"
+description = "This project processes a video file to detect and annotate people using the YOLOv8 object detection model. The output is a new video with visualized bounding boxes and class-confidence labels per detection."
+authors = [
+    {name = "maks",email = "maks.kuklanov@mail.ru"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    "ultralytics (>=8.3.151,<9.0.0)",
+    "numpy (>=2.2.6,<3.0.0)",
+    "detection-tools (>=0.3,<0.4)",
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn (>=0.34.3,<0.35.0)",
+    "python-multipart (>=0.0.20,<0.0.21)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
