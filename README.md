@@ -42,19 +42,19 @@ poetry run python main.py
 
 ```
 crowd-detector/
-├── detection_tools/
-│ ├── init.py
-│ ├── detector.py
-│ └── video_utils.py
-├── templates/
-│ └── index.html
-├── .gitignore
-├── LICENSE
-├── main.py                       # Точка входа 
-├── poetry.lock
-├── pyproject.toml
-├── README.md
-├── requirements.txt              # Этот файл
+├── detection_tools/              # Модуль с логикой детекции
+│   ├── __init__.py               
+│   ├── detector.py               # Обёртка над YOLO-моделью
+│   └── video_utils.py            # Функции обработки видео и загрузки в файл
+├── templates/                    
+│   └── index.html                # Форма загрузки видео
+├── .gitignore                   
+├── LICENSE                       
+├── main.py                       # Точка входа: FastAPI-приложение
+├── poetry.lock                   # Фиксация зависимостей Poetry
+├── pyproject.toml                # Poetry-конфигурация проекта и зависимостей
+├── README.md                     # Документация: описание, установка, запуск
+├── requirements.txt              # Зависимости для установки через pip
 ```
 
 ---
