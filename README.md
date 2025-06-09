@@ -12,7 +12,7 @@
 ###  Установка через pip и запуск точки входа
 
 ```bash
-git clone git@github.com:KuklanovMaks/crowd-detector.git
+git clone https://github.com/KuklanovMaks/crowd-detector.git
 cd crowd-detector
 pip install -r requirements.txt
 python main.py
@@ -21,13 +21,11 @@ python main.py
 ### Установка через Poetry (рекомендуется) и запуск точки входа
 
 ```bash
-git clone git@github.com:KuklanovMaks/crowd-detector.git
+git clone https://github.com/KuklanovMaks/crowd-detector.git
 cd crowd-detector
 poetry install
 poetry run python main.py
 ```
-
->  Требуется Python 3.8 или выше.
 
 ---
 
@@ -36,7 +34,7 @@ poetry run python main.py
 1. Открой в браузере `http://127.0.0.1:8000`  
 2. Загрузите `.mp4` видео через форму  
 3. Дождитесь завершения обработки  
-4. Скачайте видео с результатами (`person 0.87`, `person 0.92`, ...)
+4. Браузер выдаст видео-результат в загрузки 
 
 ---
 
@@ -44,15 +42,19 @@ poetry run python main.py
 
 ```
 crowd-detector/
-├── main.py                  # Запуск FastAPI
-├── requirements.txt         # Зависимости для pip
-├── pyproject.toml           # Poetry-конфигурация
-├── templates/
-│   └── index.html           # HTML-интерфейс
 ├── detection_tools/
-│   ├── detector.py          # обёртка над YOLO детектором
-│   └── video_utils.py       # Обработка видео
-├── README.md                # Этот файл
+│ ├── init.py
+│ ├── detector.py
+│ └── video_utils.py
+├── templates/
+│ └── index.html
+├── .gitignore
+├── LICENSE
+├── main.py                       # Точка входа 
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+├── requirements.txt              # Этот файл
 ```
 
 ---

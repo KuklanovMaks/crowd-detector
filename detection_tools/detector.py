@@ -20,7 +20,7 @@ class PeopleDetector:
             model_path (str): Путь к .pt-файлу модели YOLO.
         """
         self.model = YOLO(model_path)
-        self.conf_threshold = 0.05
+        self.conf_threshold = 0.1
         self.person_class_id = 0  # класс "человек" в COCO
 
     def detect(self, frame: np.ndarray):
@@ -37,7 +37,7 @@ class PeopleDetector:
             source=frame,
             conf=self.conf_threshold,
             classes=[self.person_class_id],
-            imgsz=1280,
+            imgsz=1024,
             agnostic_nms=True,
             verbose=False
         )
