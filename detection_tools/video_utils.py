@@ -19,7 +19,7 @@ def process_video(input_path: str, output_path: str) -> None:
     detector = PeopleDetector()
 
     if not cap.isOpened():
-        print(f"❌ Не удалось открыть видеофайл: {input_path}")
+        print(f"Не удалось открыть видеофайл: {input_path}")
         return
 
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
